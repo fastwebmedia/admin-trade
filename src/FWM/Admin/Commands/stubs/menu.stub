@@ -1,0 +1,3 @@
+<?php
+
+Admin::menu()->url('/')->label('Dashboard')->icon('fa-dashboard');

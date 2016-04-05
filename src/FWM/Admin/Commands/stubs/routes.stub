@@ -1,0 +1,10 @@
+<?php
+
+Route::get('', [
+	'as' => 'admin.home',
+	function ()
+	{
+		$content = 'Please select an option from the menu.';
+		return Admin::view($content, 'Dashboard');
+	}
+]);

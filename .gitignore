@@ -1,0 +1,9 @@
+.DS_STORE
+*.swp
+/resources/bower_components
+/resources/node_modules
+composer.phar
+composer.lock
+.DS_Store
+.idea
+/vendor
