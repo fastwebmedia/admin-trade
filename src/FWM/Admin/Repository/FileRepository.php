@@ -23,7 +23,13 @@ class FileRepository extends ImageRepository
 
 		$targetPath = $this->createFilePath($filename);
 
-		$this->flysystem->disk('s3')->put($targetPath, file_get_contents($uploadedFile));
+		$params = [
+			'params' => [
+				'ContentDisposition' => 'attachment'
+			]
+		];
+
+		$this->flysystem->disk('s3')->put($targetPath, file_get_contents($uploadedFile), $params);
 
 		$fileUrl = config('admin.aws.uploadPath').$targetPath;
 
